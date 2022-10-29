@@ -1,0 +1,299 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 75em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Inter", serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+body {
+  padding: 1rem;
+}
+
+.nav {
+  height: 5rem;
+}
+.nav__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 37.5em) {
+  .nav__container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+.nav__logo {
+  width: 5rem;
+}
+.nav__items {
+  display: flex;
+  list-style: none;
+  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .nav__items {
+    width: 0%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+    height: 100vh;
+    z-index: 3;
+    background-color: hsl(36deg, 100%, 99%);
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav__items li {
+    margin: 2rem 0;
+  }
+}
+.nav__items li a {
+  text-decoration: none;
+  color: hsl(236deg, 13%, 42%);
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.nav__items li a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+@media screen and (max-width: 600px) {
+  .nav__items li a {
+    font-size: 1.8rem;
+    text-align: left;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 47.8em) {
+  .hero .container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 2rem;
+    justify-content: center;
+    align-items: start;
+  }
+}
+@media screen and (min-width: 47.8em) {
+  .hero .main {
+    grid-column: 1/8;
+  }
+}
+@media screen and (min-width: 56.25em) {
+  .hero .main__textcontent {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 47.8em) {
+  .hero .main__textcontent h1, .hero .main__textcontent p {
+    flex: 1;
+    margin: 0 0.5rem;
+  }
+}
+.hero .main__textcontent h1 {
+  color: hsl(240deg, 100%, 5%);
+  font-size: 3rem;
+  text-align: left;
+  width: 60%;
+  margin: 1rem 0;
+  font-weight: 800;
+}
+.hero .main__textcontent p {
+  color: hsl(236deg, 13%, 42%);
+  line-height: 1.5;
+}
+.hero .main__textcontent .btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: hsl(5deg, 85%, 63%);
+  font-size: 1.2rem;
+  color: hsl(36deg, 100%, 99%);
+  padding: 1rem 2rem;
+  display: block;
+  width: 60%;
+  margin: 1.5rem 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+.hero .main__textcontent .btn:hover {
+  background-color: hsl(240deg, 100%, 5%);
+}
+
+.sidebar {
+  background-color: hsl(240deg, 100%, 5%);
+  padding: 2rem;
+}
+@media screen and (min-width: 47.8em) {
+  .sidebar {
+    grid-column: 8/-1;
+  }
+}
+.sidebar .heading--orange {
+  color: hsl(35deg, 77%, 62%);
+}
+.sidebar .textcontent {
+  position: relative;
+  margin: 1rem 0;
+}
+.sidebar .textcontent h1 {
+  color: hsl(36deg, 100%, 99%);
+  font-size: 2rem;
+  margin: 1rem 0;
+  transition: color 0.3s ease-out;
+}
+.sidebar .textcontent h1:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+.sidebar .textcontent p {
+  color: hsl(233deg, 8%, 79%);
+}
+.sidebar .line {
+  margin-top: 3rem;
+  color: hsl(233deg, 8%, 79%);
+  height: 1px;
+}
+
+.moreStories {
+  margin-top: 5rem;
+}
+.moreStories .container {
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+}
+@media screen and (min-width: 47.8em) {
+  .moreStories .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 47.8em) {
+  .moreStories .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.moreStories .story {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(30px, 1fr));
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem;
+  margin: 2rem 0;
+}
+@media screen and (min-width: 56.25em) {
+  .moreStories .story {
+    margin: 0 1rem;
+  }
+}
+.moreStories .story img {
+  grid-column: 1/2;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.moreStories .story .textcontent {
+  grid-column: 2/-1;
+}
+.moreStories .story .textcontent h1 {
+  color: hsl(233deg, 8%, 79%);
+  letter-spacing: 0.4rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.sub__heading {
+  color: hsl(240deg, 100%, 5%);
+  margin: 0.5rem 0;
+  line-height: 1.2;
+  font-size: 1.8rem;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+.sub__heading:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+
+.hamburger {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+.close,
+.hamburger {
+  cursor: pointer;
+}
+
+.close {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .close {
+    align-self: end;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .show {
+    width: 80%;
+    transition: width 1s ease-in;
+  }
+}/*# sourceMappingURL=main.css.map */

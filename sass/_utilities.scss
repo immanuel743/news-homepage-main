@@ -1,0 +1,42 @@
+.heading {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.sub__heading {
+  color: $Verydarkblue;
+  margin: 0.5rem 0;
+  line-height: 1.2;
+  font-size: 1.8rem;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+  &:hover {
+    color: $Softred;
+  }
+}
+
+.hamburger {
+  display: none;
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
+}
+.close,
+.hamburger {
+  cursor: pointer;
+}
+.close {
+  display: none;
+  // width: ;
+  @media screen and (max-width: 600px) {
+    align-self: end;
+    display: block;
+  }
+}
+
+.show {
+  @media screen and (max-width: 600px) {
+    width: 80%;
+    transition: width 1s ease-in;
+  }
+}

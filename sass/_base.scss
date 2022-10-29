@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  // border: 1px solid red;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  @include respond($laptop) {
+    font-size: 75%;
+  }
+}
+img {
+  max-width: 100%;
+}
+body {
+  font-family: "Inter", serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+body {
+  padding: 1rem;
+}

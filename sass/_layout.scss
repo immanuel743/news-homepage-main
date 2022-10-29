@@ -1,0 +1,209 @@
+// navigation
+.nav {
+  height: 5rem;
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include respond($phone) {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    // padding: 1rem;
+  }
+  &__logo {
+    width: 5rem;
+  }
+  &__items {
+    display: flex;
+    list-style: none;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 600px) {
+      width: 0%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(0, 0);
+      height: 100vh;
+      z-index: 3;
+      background-color: $Off-white;
+      flex-direction: column;
+      justify-content: start;
+      overflow: hidden;
+    }
+    & li {
+      @media screen and (max-width: 600px) {
+        margin: 2rem 0;
+      }
+      & a {
+        text-decoration: none;
+        color: $Darkgrayishblue;
+        display: inline-block;
+        font-size: 1.4rem;
+        margin: 0 1rem;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          color: $Softred;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 1.8rem;
+          text-align: left;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// hero main content
+.hero {
+  & .container {
+    @include respond($tab-port) {
+      max-width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-gap: 2rem;
+      // height: 60vh;
+      justify-content: center;
+      align-items: start;
+    }
+  }
+  .main {
+    @include respond($tab-port) {
+      grid-column: 1/8;
+    }
+    &__textcontent {
+      @include respond($tab-land) {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      & h1,
+      & p {
+        @include respond($tab-port) {
+          flex: 1;
+          margin: 0 0.5rem;
+        }
+      }
+      & h1 {
+        color: $Verydarkblue;
+        font-size: 3rem;
+        text-align: left;
+        width: 60%;
+        margin: 1rem 0;
+        font-weight: 800;
+      }
+      & p {
+        color: $Darkgrayishblue;
+        line-height: 1.5;
+      }
+      & .btn {
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: $Softred;
+        font-size: 1.2rem;
+        color: $Off-white;
+        padding: 1rem 2rem;
+        display: block;
+        width: 60%;
+        margin: 1.5rem 0;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.5s ease-in-out;
+        &:hover {
+          background-color: $Verydarkblue;
+        }
+      }
+    }
+  }
+}
+
+// sidebar
+.sidebar {
+  @include respond($tab-port) {
+    grid-column: 8/-1;
+  }
+  background-color: $Verydarkblue;
+  padding: 2rem;
+  & .heading--orange {
+    color: $Softorange;
+  }
+  & .textcontent {
+    position: relative;
+    margin: 1rem 0;
+
+    & h1 {
+      color: $Off-white;
+      font-size: 2rem;
+      margin: 1rem 0;
+      transition: color 0.3s ease-out;
+      &:hover {
+        color: $Softorange;
+      }
+    }
+    & p {
+      color: $Grayishblue;
+    }
+  }
+  & .line {
+    margin-top: 3rem;
+    color: $Grayishblue;
+    height: 1px;
+  }
+}
+
+// more stories
+.moreStories {
+  margin-top: 5rem;
+  & .container {
+    padding: 1rem;
+    display: grid;
+    place-content: center;
+    @include respond($tab-port) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 90%;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+    }
+    @include respond($tab-port) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  & .story {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(30px, 1fr));
+
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+    margin: 2rem 0;
+    @include respond($tab-land) {
+      margin: 0 1rem;
+    }
+
+    & img {
+      grid-column: 1/2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    & .textcontent {
+      grid-column: 2/-1;
+      & h1 {
+        color: $Grayishblue;
+        letter-spacing: 0.4rem;
+      }
+    }
+  }
+}
